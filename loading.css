@@ -8,3 +8,12 @@
 @keyframes loading-shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
 @keyframes loading-spin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.image-loader::before,.image-loader::after{animation:none}}
+.retry-button{position:absolute;z-index:3;top:50%;left:50%;transform:translate(-50%,-50%);padding:12px 20px;border:1px solid rgba(200,255,0,.55);border-radius:999px;background:rgba(5,2,10,.88);color:#f6f3fb;font:600 13px Arial,"Microsoft YaHei",sans-serif;cursor:pointer;backdrop-filter:blur(10px)}
+.retry-button:hover{color:#c8ff00;border-color:#c8ff00}
+.retry-button[hidden]{display:none}
+.image-loader.is-failed::after{opacity:0;animation:none}
+.image-retry{position:absolute;z-index:3;top:50%;left:50%;display:none;transform:translate(-50%,-50%);padding:12px 20px;border:1px solid rgba(200,255,0,.55);border-radius:999px;background:rgba(9,4,17,.9);color:#f6f3fb;font:600 13px Arial,"Microsoft YaHei",sans-serif;cursor:pointer;backdrop-filter:blur(12px)}
+.image-retry:hover,.image-retry:focus-visible{border-color:#c8ff00;color:#c8ff00;outline:none}
+.image-loader.is-error::before{animation:none;background:#08030e;opacity:1}
+.image-loader.is-error::after{display:none}
+.image-loader.is-error .image-retry{display:block}
