@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = "fangying-portfolio-v8";
+﻿const CACHE_NAME = "fangying-portfolio-v10";
 const CORE_FILES = ["./", "index.html", "styles.css", "loading.css", "loading-v3.js"];
 const inFlight = new Map();
 
